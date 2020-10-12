@@ -136,8 +136,9 @@ class Animal {
     }
 
     public void Auto_grow(Animal animalObj, int days) {
-        int food = 0, water = 0;
-        for (int i = 0; i <= days; i++) {
+        int food = 0, water = 0, day = 0;
+        day = days;
+        for (int i = 1; i <= day; i++) {
             food = 10;
             water = 10;
             animalObj.grow(food, water);
@@ -296,8 +297,8 @@ class Cow extends Animal {
             } else {
                 super.weight += super.growth_rate;
             }
-            this.days_growing += 1;
-            this.update_staus();
+            super.days_growing += 1;
+            super.update_staus();
         }
     }
 }
@@ -335,8 +336,8 @@ class Sheep extends Animal {
             } else {
                 super.weight += super.growth_rate;
             }
-            this.days_growing += 1;
-            this.update_staus();
+            super.days_growing += 1;
+            super.update_staus();
         }
     }
 }
